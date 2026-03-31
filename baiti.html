@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>baiti</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <form>
+        <p>Aprēķināt, cik daudz informāciajs var lejupielādēt <br><input name="sekundes" onfocus="sekundes.value=''; protu.value=''; document.getElementById('KB').checked=false; document.getElementById('KiB').checked=false;">
+            sekundēs, ja interneta ātrums ir 25Mbps</p>
+        <p>Atbilde<br><input name="protu"></p>
+      
+          KB<input type='radio' name='KB' value='KB' id='KB' onclick='protu.value=sekundes.value*25*1000'>
+          KiB<input type='radio' name='KB' value='KiB' id='KiB' onclick='protu.value=sekundes.value*25*976.5625'>
+      
+    
+    </form>
+    </body>
+    <script>
+    $(document).keydown( function( e ) { 
+  if( e.target.nodeName == "INPUT" || e.target.nodeName == "sekundes" ) reset;
+  if( e.target.isContentEditable ) reset; })
+    </script>
+</html>

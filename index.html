@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mans mācību portfolio</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="CSS/mansStils.css">
+</head>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-kaste-4">
+      <a href="#sakums" class="w3-bar-item w3-button">Sākums</a>
+      <a href="#teksts" class="w3-bar-item w3-button">Tekstapstrāde</a>
+      <a href="#atteli" class="w3-bar-item w3-button">Attēlu apstrāde</a>
+      <a href="#modelesana" class="w3-bar-item w3-button">3D modelēšana</a>
+      <a href="#izklajlapa" class="w3-bar-item w3-button">Izklājlapas</a>
+      <a href="skola.html" class="w3-bar-item w3-button" target="_blank">skola</a>
+      <a href="baiti.html" class="w3-bar-item w3-button" target="_blank">baiti</a>
+      <a href="otrais.html" class="w3-bar-item w3-button w3-right">Individuālā tēma</a>
+
+    </div>
+  </div>
+
+  <header class="virsraksts" id="sakums">
+    <h1>Mans datorikas portfolio</h1>
+    <p>
+      Šajā vietnē veidoju savu portfolio, par tēmām, kuras apguvu datorikas stundās:
+      tekstapstrādi, attēlu apstrādi, 3D modelēšanu, video veidošanu un izklājlapu izmantošanu.
+     
+    </p>
+  </header>
+
+  <main>
+    <section id="teksts">
+      <h2>Tekstapstrāde</h2>
+      <p>
+        Tekstapstrādē mācījos formatēt dokumentus, veidot virsrakstus, sakārtot informāciju un noformēt
+        saturu un atsauces. Kā pierādījumu pievienoju Word dokumentu Sociālā inženierija
+      </p>
+      <button class="paplaspoga" onclick="paplasinajums('tekstsSaturs')">Vairāk</button>
+      <div class="paplasinats" id="tekstsSaturs">
+       
+        <p><a href="Files/socialainzenierija.docx" download>Lejupielādēt Word dokumentu</a></p>
+      </div>
+    </section>
+
+    <section id="atteli">
+      <h2>Attēlu apstrāde</h2>
+      <p>
+        Attēlu apstrādē iepazinu gan rastra grafiku, gan vektorgrafiku. Zemāk redzami mani darba piemēri.
+      </p>
+      <button class="paplaspoga" onclick="paplasinajums('grafikas')">Vairāk</button>
+      <div class="paplasinats" id="grafikas">
+        <div class="video">
+          <div class="kaste">
+            <h3>Rastra grafika - GIF animācija</h3>
+            <img src="Images/socialainzenierija.gif" alt="GIF animācija">
+            <p class="skaidrojums">GIF parāda kustīgu rastra grafikas piemēru. Veidojām šo gada sākumā tēmā GIMP</p>
+          </div>
+          <div class="kaste">
+            <h3>Vektorgrafika - logo</h3>
+            <img src="Images/Logo_Henrijs.svg" alt="Logo">
+            <p class="skaidrojums">Veidoju šo programmā Inkscape, kā WROBOT uzņēmuma logo. Šo logo pēc tam piedāvāju kā iespēju veidot citām grupām kā 3D projektu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelesana">
+      <h2>3D modelēšana</h2>
+      <p>
+        3D modelēšanā veidoju kuba skaldni, kā arī novedu kuba projektu līdz īstenībai.
+       
+      </p>
+      <button class="paplaspoga" onclick="paplasinajums('modelesanapiem')">Vairāk</button>
+      <div class="paplasinats" id="modelesanapiem">
+        <div class="video">
+          <div class="kaste">
+            <img src="Images/Skaldne.png" alt="3D kuba skaldnes attēls">
+            <p class="skaidrojums">Attēlā redzama mana izveidotā kuba skaldne. Katrs no grupas izveidojām vienu kuba skaldni par logo "Sunnails".</p>
+          </div>
+          <div class="kaste">
+            <video controls>
+              <source src="Files/3D_Modelis_Gulans.mp4" type="video/mp4">
+             
+            </video>
+            <p class="skaidrojums">Video parādīta 3D modeļa veidošanas gaita.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="izklajlapa">
+      <h2>Izklājlapas</h2>
+      <p>
+        Mācījos strādāt ar Excel, veidot diagrammas, formulas, tās labot, analizēt grafikus un kārtot datus.
+      </p>
+      <button class="paplaspoga" onclick="paplasinajums('izklajlapas')">Vairāk</button>
+      <div class="paplasinats" id="izklajlapas">
+        <p><a href="Files/aprekini.xlsx" download>Lejupielādēt xlsx datni</a></p>
+      </div>
+    </section>
+
+    <section id="beigas">
+      <h2>Papildu uzdevumi</h2>
+      <p>HTML uzdevumi:</p>
+      <button class="paplaspoga" onclick="paplasinajums('beigasSaturs')">Vairāk</button>
+      <div class="paplasinats" id="beigasSaturs">
+        <div class="linki">
+          <a href="forma.html" target="_blank">forma.html</a>
+          <a href="dzerdaudz.html" target="_blank">dzerdaudz.html</a>
+          <a href="dzer.html" target="_blank">dzer.html</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function paplasinajums(id) {
+      document.getElementById(id).classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
